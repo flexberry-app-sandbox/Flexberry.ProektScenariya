@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-proekt-scenariya-нора-ежика-e",
+  "editForm": "i-i-s-proekt-scenariya-нора-ежика-e",
+  "external": false,
+  "caption": "Нора ежика",
+  "name": "IISProekt_scenariyaНораЕжикаL",
+  "className": "НораЕжикаL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-proekt-scenariya-нора-ежика",
+      "modelProjection": "НораЕжикаL"
+    }
+  ]
+}

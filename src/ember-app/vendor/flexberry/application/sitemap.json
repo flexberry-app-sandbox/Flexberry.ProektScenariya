@@ -1,0 +1,29 @@
+﻿{
+  "applicationCaption": "Proekt_scenariya",
+  "applicationTitle": "Proekt_scenariya",
+  "items": [
+    {
+      "link": null,
+      "menuName": "proekt-scenariya",
+      "caption": "Proekt_scenariya",
+      "title": "Proekt_scenariya",
+      "children": [
+        {
+          "link": "i-i-s-proekt-scenariya-ежик-l",
+          "menuName": null,
+          "caption": "Ежик",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-proekt-scenariya-нора-ежика-l",
+          "menuName": null,
+          "caption": "Нора ежика",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

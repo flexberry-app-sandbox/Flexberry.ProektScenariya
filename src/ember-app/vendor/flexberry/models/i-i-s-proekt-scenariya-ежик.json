@@ -1,0 +1,89 @@
+﻿{
+  "name": "IISProekt_scenariyaЕжик",
+  "modelName": "i-i-s-proekt-scenariya-ежик",
+  "className": "Ежик",
+  "nameSpace": "IIS.Proekt_scenariya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "возраст",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "имя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "лапаЕжика",
+      "relatedTo": "i-i-s-proekt-scenariya-лапа-ежика",
+      "inverse": "ежик"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЕжикE",
+      "modelName": "i-i-s-proekt-scenariya-ежик",
+      "attrs": [
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "возраст",
+          "caption": "Возраст",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ЛапаЕжикаE",
+          "caption": "Лапа ежика",
+          "name": "лапаЕжика",
+          "relatedTo": "i-i-s-proekt-scenariya-лапа-ежика",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЕжикL",
+      "modelName": "i-i-s-proekt-scenariya-ежик",
+      "attrs": [
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "возраст",
+          "caption": "Возраст",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

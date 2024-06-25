@@ -1,0 +1,61 @@
+<h3 class="ui header">{{t "forms.i-i-s-proekt-scenariya-ежик-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.имя
+      class=(if (v-get validationModel "имя" "isInvalid") "error")
+      label=(t "forms.i-i-s-proekt-scenariya-ежик-e.имя-caption")
+      data-test-i-i-s-proekt-scenariya-ежик-e-имя=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "имя" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.возраст
+      class=(if (v-get validationModel "возраст" "isInvalid") "error")
+      label=(t "forms.i-i-s-proekt-scenariya-ежик-e.возраст-caption")
+      data-test-i-i-s-proekt-scenariya-ежик-e-возраст=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "возраст" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-proekt-scenariya-ежик-e.лапаЕжика-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="лапаЕжикаGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.лапаЕжика
+      content=model.лапаЕжика
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "лапаЕжика" "isInvalid") "error")
+      data-test-i-i-s-proekt-scenariya-ежик-e-лапаЕжика=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "лапаЕжика" "message")}}
+  </div>
+</form>

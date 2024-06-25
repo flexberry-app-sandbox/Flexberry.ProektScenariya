@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISProekt_scenariyaЛапаЕжика",
+  "modelName": "i-i-s-proekt-scenariya-лапа-ежика",
+  "className": "ЛапаЕжика",
+  "nameSpace": "IIS.Proekt_scenariya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "расположение",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "целостность",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "ежик",
+      "relatedTo": "i-i-s-proekt-scenariya-ежик",
+      "inverse": "лапаЕжика"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ЛапаЕжикаE",
+      "modelName": "i-i-s-proekt-scenariya-лапа-ежика",
+      "attrs": [
+        {
+          "name": "расположение",
+          "caption": "Расположение",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "целостность",
+          "caption": "Целостность",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

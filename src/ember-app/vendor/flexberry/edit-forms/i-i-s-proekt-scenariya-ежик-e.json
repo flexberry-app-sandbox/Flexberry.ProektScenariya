@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Ежик",
+  "name": "IISProekt_scenariyaЕжикE",
+  "className": "ЕжикE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-proekt-scenariya-ежик",
+      "modelProjection": "ЕжикE"
+    }
+  ]
+}
